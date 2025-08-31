@@ -8,7 +8,7 @@ Introductory project to computer security in the specific field of the web.
 
 ### Set up with QEMU
 
-- qemu-system-i386 -m 1024 -cdrom Darkly_i386.iso -netdev user,id=net0,hostfwd=tcp::8080-:80 -device e1000,netdev=net0
+- qemu-system-x86_64 -m 1024 -cdrom Darkly_i386.iso -netdev user,id=net0,hostfwd=tcp::8080-:80 -device e1000,netdev=net0
 
 ### Set up with VirtualBox:
 
@@ -18,13 +18,21 @@ Introductory project to computer security in the specific field of the web.
 - VBoxManage storageattach "Darkly" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium Darkly_i386.iso
 - VBoxManage startvm "Darkly"
 
-## Breach Guide
+## Breach web link and notes
 
+- There is a breach template directory to copy and paste while testing each potential breach.
+- File naming convention to be something like this? "<breachname>-<status>".
+- Possible status to be "inprogress", "notfound", "done", "name", just self indicate status.
 - https://owasp.org/www-project-web-security-testing-guide/stable/
 
-### Breaches
+## Breaches
+
+### Check Breaches
 
 - Conduct Search Engine Discovery - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/01-Conduct_Search_Engine_Discovery_Reconnaissance_for_Information_Leakage
+
+### Uncheck Breaches
+
 - Fingerprint Web Server https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server
 - Review Webserver Metafiles - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage
 - Enumerate Applications - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/04-Enumerate_Applications_on_Webserver
@@ -34,7 +42,6 @@ Introductory project to computer security in the specific field of the web.
 - Fingerprint Framework - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework
 - Fingerprint Application - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/09-Fingerprint_Web_Application
 - Map Architecture - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture
-
 - Network Infrastructure - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/01-Test_Network_Infrastructure_Configuration
 - Application Platform - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/02-Test_Application_Platform_Configuration
 - https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/03-Test_File_Extensions_Handling_for_Sensitive_Information
